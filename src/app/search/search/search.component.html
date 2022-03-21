@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Search Books</span>
+
+  </mat-toolbar-row>
+  <mat-toolbar-row class="second-row">
+    <mat-form-field class="full-width" appearance="fill">
+      <mat-label>Type a title and click search</mat-label>
+      <input matInput type="text" [(ngModel)]="search">
+      <button *ngIf="books.length > 0; else searchIcon" matSuffix mat-icon-button aria-label="Clear" (click)="clearSearch()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <ng-template #searchIcon>
+        <button matSuffix mat-icon-button aria-label="search" (click)="submit()" >
+          <mat-icon>search</mat-icon>
+        </button>
+      </ng-template>
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-tab-group mat-align-tabs="start" class="tab-container">
+  <mat-tab label="Available books">
+    <search-table></search-table>
+  </mat-tab>
+  <mat-tab label="Favorites">
+    <favorite-table></favorite-table>
+  </mat-tab>
+</mat-tab-group>

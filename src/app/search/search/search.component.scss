@@ -1,0 +1,26 @@
+.spacer {
+  flex: 1 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.second-row {
+  margin-top: 20px;
+}
+
+.tab-container {
+  padding: 0 16px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(.8);
+  }
+}

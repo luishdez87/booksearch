@@ -1,0 +1,33 @@
+.table-container {
+  padding: 0 16px;
+}
+.full-width {
+  width: 100%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(.8);
+  }
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: .4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mat-row:nth-child(even) {
+  background-color: rgb(154, 178, 255);
+}

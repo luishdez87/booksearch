@@ -1,0 +1,14 @@
+.full-width {
+  width: 100%;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(.8);
+  }
+}
